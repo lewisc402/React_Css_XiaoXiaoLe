@@ -10,7 +10,9 @@
   "plugins": [
   ],
   "extends": "eslint-config-airbnb",
+  "parser": "babel-eslint",
   "rules": {
+    "strict": 0,
     "comma-dangle": 0,
     "no-console": 0,
     "id-length": 0,

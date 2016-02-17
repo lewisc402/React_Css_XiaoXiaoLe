@@ -7,16 +7,16 @@ export default class Board extends React.Component {
     this.state = {containers: []};
     this.initContainers();
   }
-  initContainers = () => {
-    for(let i = 0; i < 16; i++) {
-      let container = {};
+  selected = () => {
+    console.log('sss');
+  };
+  initContainers=() => {
+    for (let i = 0; i < 16; i++) {
+      const container = {};
       container.id = i;
       container.content = i;
       this.state.containers.push(container);
     }
-  }
-  selected = () => {
-    alert("sss");
   }
   render() {
     const {containers } = this.state;
