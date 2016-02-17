@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+h1{
+  color: red;
+}
+
+.board {
+    background: deepskyblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+.container {
+    flex: 0 1 50px;
+    height: 50px;
+    border: 1px solid;
+}
+
+.containr:hover {
+    -webkit-transform: translate(50px, 0);
+    -webkit-transition: all 2s ease-in;
+}
+
+.selected {
+    border: 1px solid snow;
+}
