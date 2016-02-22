@@ -18,13 +18,27 @@ h1{
     flex: 0 1 50px;
     height: 50px;
     border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.move {
+.right {
     -webkit-transform: translate(50px, 0);
-    -webkit-transition: all 2s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+}
+
+.left {
+    -webkit-transform: translate(-50px, 0);
+    -webkit-transition: all 0.5s ease-in;
 }
 
 .selected {
     border: 1px solid snow;
+}
+
+.cell {
+    flex: 0 1 30px;
+    height: 30px;
+    background: tomato;
 }

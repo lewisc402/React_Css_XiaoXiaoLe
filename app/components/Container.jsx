@@ -1,4 +1,5 @@
 import React from 'react';
+import Animal from './Animal.jsx';
 
 export default class Container extends React.Component {
   constructor(props) {
@@ -10,25 +11,26 @@ export default class Container extends React.Component {
   }
   select = () => {
     const {index, callbackParent} = this.props;
+    console.log('sss ' + index);
 
     callbackParent(index);
 
-    this.setState({
-      selecting: true
-    });
+    // this.setState({
+    //   selecting: true
+    // });
   }
   render() {
-    const {index, selected} = this.props;
+    const {index, selected, content} = this.props;
     // const {selecting} = this.state;
     let conClass = 'container';
 
     if (selected) {
-      conClass = conClass + ' selected' + ' move';
+      conClass = conClass + ' selected ';
     }
 
     return (
         <div className={conClass} onClick={this.select}>
-            {index}
+            <Animal content={content}/>
         </div>
     );
   }
