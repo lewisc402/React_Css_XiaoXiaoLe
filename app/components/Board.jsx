@@ -4,11 +4,11 @@ import Container from './Container.jsx';
 export default class Board extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {containers: [], selectIndex: null, sourceIndex: null, targetIndex: null, selected: false};
+    this.state = {containers: [], sourceIndex: null, targetIndex: null, selected: false};
     this.initContainers();
   }
   onContainerSelected= (index) => {
-    let {containers, selectIndex, sourceIndex, targetIndex, selected} = this.state;
+    let {sourceIndex, targetIndex, selected} = this.state;
 
     if (sourceIndex && targetIndex) {
       sourceIndex = null;
@@ -18,7 +18,7 @@ export default class Board extends React.Component {
     if (sourceIndex === null) {
       sourceIndex = index;
       // if (targetIndex && this.canMove(sourceIndex, targetIndex)) {
-        console.log('aaa ' + index);
+        // console.log('aaa ggk' + index);
         // [containers[sourceIndex].content, containers[targetIndex].content] =
         //       [containers[targetIndex].content, containers[sourceIndex].content];
       // }

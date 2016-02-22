@@ -9,9 +9,11 @@ export default class Container extends React.Component {
       selecting: false
     };
   }
-  select = () => {
+  select = (e) => {
     const {index, callbackParent} = this.props;
     console.log('sss ' + index);
+    e.stopPropagation();
+    e.preventDefault();
 
     callbackParent(index);
 
@@ -20,7 +22,7 @@ export default class Container extends React.Component {
     // });
   }
   render() {
-    const {index, selected, content} = this.props;
+    const {selected, content} = this.props;
     // const {selecting} = this.state;
     let conClass = 'container';
 
